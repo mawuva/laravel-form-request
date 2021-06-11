@@ -1,8 +1,12 @@
 {
     "name": "mawuekom/laravel-form-request",
-    "description": "Laravel Form Request adaptation",
+    "description": "Laravel Form Request adaptation for Lumen Framework",
     "keywords": [
-        "mawuekom",
+        "mawuekom", 
+        "laravel", 
+        "lumen",
+        "form-request",
+        "lumen-form-request",
         "laravel-form-request"
     ],
     "homepage": "https://github.com/mawuekom/laravel-form-request",

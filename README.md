@@ -1,6 +1,6 @@
-# Laravel Form Request Adaptation
+# Laravel Form Request adaptation for Lumen Framework
 
-This package is a Laravel Form Request adaptation for Lumen.
+This package is a Laravel Form Request adaptation for Lumen Framework.
 You can use it in Laravel also but, it's not necessary.
 
 ## Installation
