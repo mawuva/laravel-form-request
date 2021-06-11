@@ -1,10 +1,7 @@
-# Very short description of the package
+# Laravel Form Request Adaptation
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/mawuekom/laravel-form-request.svg?style=flat-square)](https://packagist.org/packages/mawuekom/laravel-form-request)
-[![Total Downloads](https://img.shields.io/packagist/dt/mawuekom/laravel-form-request.svg?style=flat-square)](https://packagist.org/packages/mawuekom/laravel-form-request)
-![GitHub Actions](https://github.com/mawuekom/laravel-form-request/actions/workflows/main.yml/badge.svg)
-
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+This package is a Laravel Form Request adaptation for Lumen.
+You can use it in Laravel also but, it's not necessary.
 
 ## Installation
 
@@ -14,39 +11,43 @@ You can install the package via composer:
 composer require mawuekom/laravel-form-request
 ```
 
+#### Make some configs
+
+- Add the service provider in `bootstrap/app.php`
+
+```php
+$app->register(Mawuekom\FormRequest\FormRequestServiceProvider::class);
+```
+
+Next step is create your FormRequest and extends from `Mawuekom/FormRequest/Http/FormRequest`
+
 ## Usage
 
 ```php
-// Usage description here
+<?php
+
+namespace App\Http\Requests;
+
+use Mawuekom\FormRequest\Http\FormRequest;
+
+class StoreUserRequest extends FormRequest
+{
+	public function authorize()
+	{
+		return true;
+	}
+
+	public function rules()
+	{
+		return [
+			'name' => 'required|string',
+			'email' => 'required|string|email',
+		];
+	}
+}
+
 ```
-
-### Testing
-
-```bash
-composer test
-```
-
-### Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-### Security
-
-If you discover any security related issues, please email seddorephraim7@gmail.com instead of using the issue tracker.
-
-## Credits
-
--   [Ephraïm Seddor](https://github.com/mawuekom)
--   [All Contributors](../../contributors)
 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-## Laravel Package Boilerplate
-
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).

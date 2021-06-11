@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Mawuekom\\LaravelFormRequest\\": "src"
+            "Mawuekom\\FormRequest\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Mawuekom\\LaravelFormRequest\\Tests\\": "tests"
+            "Mawuekom\\FormRequest\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -44,11 +44,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Mawuekom\\LaravelFormRequest\\LaravelFormRequestServiceProvider"
-            ],
-            "aliases": {
-                "LaravelFormRequest": "Mawuekom\\LaravelFormRequest\\LaravelFormRequestFacade"
-            }
+                "Mawuekom\\FormRequest\\FormRequestServiceProvider"
+            ]
         }
     }
 }
