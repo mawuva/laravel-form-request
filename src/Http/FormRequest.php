@@ -99,7 +99,7 @@ class FormRequest extends Request implements ValidatesWhenResolved
 
         return $this->validator;
     }
-
+ 
     /**
      * Create the default validator instance.
      *
@@ -219,6 +219,7 @@ class FormRequest extends Request implements ValidatesWhenResolved
      * Set the Validator instance.
      *
      * @param  \Illuminate\Contracts\Validation\Validator  $validator
+     * 
      * @return $this
      */
     public function setValidator(Validator $validator)
@@ -232,6 +233,7 @@ class FormRequest extends Request implements ValidatesWhenResolved
      * Set the Redirector instance.
      *
      * @param  \Illuminate\Routing\Redirector  $redirector
+     * 
      * @return $this
      */
     public function setRedirector(Redirector $redirector)
@@ -245,6 +247,7 @@ class FormRequest extends Request implements ValidatesWhenResolved
      * Set the container implementation.
      *
      * @param  \Illuminate\Contracts\Container\Container  $container
+     * 
      * @return $this
      */
     public function setContainer(Container $container)

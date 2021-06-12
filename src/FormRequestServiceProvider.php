@@ -4,13 +4,20 @@ namespace Mawuekom\FormRequest;
 
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Foundation\Http\FormRequest;
+use Mawuekom\FormRequest\Http\FormRequest;
 use Illuminate\Contracts\Validation\ValidatesWhenResolved;
 
+/**
+ * Class FormRequestServiceProvider
+ * 
+ * @package Mawuekom\FormRequest
+ */
 class FormRequestServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
+     * 
+     * @return void
      */
     public function boot()
     {
@@ -27,6 +34,8 @@ class FormRequestServiceProvider extends ServiceProvider
 
     /**
      * Register the application services.
+     * 
+     * @return void
      */
     public function register()
     {
