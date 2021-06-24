@@ -9,7 +9,7 @@
         "lumen-form-request",
         "laravel-form-request"
     ],
-    "homepage": "https://github.com/mawuekom/laravel-form-request",
+    "homepage": "https://github.com/mawuva/laravel-form-request",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -19,8 +19,6 @@
             "role": "Developer"
         }
     ],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "require": {
         "php": "^7.4|^8.0",
         "illuminate/support": "^8.0"
@@ -53,5 +51,7 @@
                 "Mawuekom\\FormRequest\\FormRequestServiceProvider"
             ]
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
